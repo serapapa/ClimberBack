@@ -1,12 +1,16 @@
-var express = require('express'); // 간단한 서버 모듈이라고 생각하면 된다.
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-//var user = require('./router/userRouter.js');
-//app.use('/user',user);
+let express = require('express');
+let  router = express.Router();
+let community = require('../controller/community')
 
-
-app.get('/',function(req,res,next){
-  res.json({test:"connect test"})
+router.get( '/' , (req,res)=>{
+    res.json({"reuslt":"resultewt"})
 })
-app.listen(31000, ()=> console.log("Server listneing to port : "+31000));
+
+router.post( '/list/get' ,community.getBoardList)
+
+router.get('/list',(req,res)=>{
+    res.json({"te":"st"})
+}
+)
+
+module.exports = router;
