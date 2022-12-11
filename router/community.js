@@ -8,5 +8,10 @@ router.get( '/' , (req,res)=>{
 
 router.post( '/list/get' ,community.getBoardList)
 
+router.get('/list',(req,res)=>{
+    res.json({"te":"st"})
+}
+)
+
 
 module.exports = router;
