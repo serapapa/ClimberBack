@@ -1,4 +1,4 @@
-var express = require('express');// 간단한 서버 모듈이라고 생각하면 된다.
+var express = require('express'); // 간단한 서버 모듈이라고 생각하면 된다.
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
