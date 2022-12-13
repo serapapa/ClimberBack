@@ -14,4 +14,17 @@ router.get('/list',(req,res)=>{
 )
 
 
+// 암장관리자 글(광고, 이벤트)
+/*
+router.get('/centermakeBoard',(req,res)=>{
+    res.json(
+        {"USER_NO":"user_no",
+        "POST_CONT":"post_cont",
+        "POST_DATE":"post_date",
+        "POST_TYPE":"post_type"}        
+    )
+})
+*/
+
+
 module.exports = router;

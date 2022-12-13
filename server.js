@@ -11,6 +11,8 @@ app.use('/community',community)
 
 
 app.post('/',function(req,res,next){
-
+})
+app.get('/',function(req,res,next){
+    res.json()
 })
 app.listen(31000, ()=> console.log("Server listneing to port : "+31000));
