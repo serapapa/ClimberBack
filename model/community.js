@@ -1,7 +1,7 @@
 let community = new Object();
 
 community.parseGetListBody = (body) =>{
-    return new Promise((resolvem, reject)=>{
+    return new Promise((resolve, reject)=>{
             console.log(body)
 
     

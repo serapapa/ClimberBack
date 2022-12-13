@@ -1,6 +1,6 @@
 let express = require('express');
 let  router = express.Router();
-let community = require('../controller/community')
+let community = require('../controller/community.js')
 
 router.get( '/' , (req,res)=>{
     res.json({"reuslt":"resultewt"})
