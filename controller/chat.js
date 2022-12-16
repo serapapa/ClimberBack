@@ -13,16 +13,16 @@ chat.getChatList = (req, res) =>{
 
 
 chat.getChatView = (req, res) =>{
-    model.parseGetChatListBody(req.body)
-    // .then(db.getList)
+    model.parseGetChatview(req.body)
+
     .then((query)=>{
-        res.json("res");
+        res.json(query);
     });
 }
 
 
 chat.getMessageView = (req, res) =>{
-    model.parseGetChatListBody(req.body)
+    model.parseGetMessage(req.body)
     // .then(db.getList)
     .then((query)=>{
         res.json(query);
@@ -31,7 +31,7 @@ chat.getMessageView = (req, res) =>{
 
 
 chat.findMessage = (req, res) =>{
-    model.parseGetChatListBody(req.body)
+    model.parseGetMessage(req.body)
     // .then(db.getList)
     .then((query)=>{
         res.json(query);
@@ -40,7 +40,7 @@ chat.findMessage = (req, res) =>{
 
 
 chat.insertMessage = (req, res) =>{
-    model.parseGetChatListBody(req.body)
+    model.parseGetMessage(req.body)
     // .then(db.getList)
     .then((query)=>{
         res.json(query);
@@ -49,7 +49,7 @@ chat.insertMessage = (req, res) =>{
 
 
 chat.deleteMessage = (req, res) =>{
-    model.parseGetChatListBody(req.body)
+    model.parseGetMessage(req.body)
     // .then(db.getList)
     .then((query)=>{
         res.json(query);
@@ -58,7 +58,7 @@ chat.deleteMessage = (req, res) =>{
 
 
 chat.deleteRoom = (req, res) =>{
-    model.parseGetChatListBody(req.body)
+    model.getUserChatList(req.body)
     // .then(db.getList)
     .then((query)=>{
         res.json(query);
@@ -68,7 +68,7 @@ chat.deleteRoom = (req, res) =>{
 
 
 chat.fixedChatRoom = (req, res) =>{
-    model.parseGetChatListBody(req.body)
+    model.getUserChatList(req.body)
     // .then(db.getList)
     .then((query)=>{
         res.json(query);
@@ -77,7 +77,7 @@ chat.fixedChatRoom = (req, res) =>{
 
 
 chat.selectProfile = (req, res) =>{
-    model.parseGetChatListBody(req.body)
+    model.getFriendsList(req.body)
     // .then(db.getList)
     .then((query)=>{
         res.json(query);
@@ -86,7 +86,7 @@ chat.selectProfile = (req, res) =>{
 
 
 chat.insertProfile = (req, res) =>{
-    model.parseGetChatListBody(req.body)
+    model.getFriendsList(req.body)
     // .then(db.getList)
     .then((query)=>{
         res.json(query);
