@@ -16,7 +16,7 @@ chat.getChatView = (req, res) =>{
     model.parseGetChatListBody(req.body)
     // .then(db.getList)
     .then((query)=>{
-        res.json(query);
+        res.json("res");
     });
 }
 
