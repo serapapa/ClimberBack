@@ -13,7 +13,7 @@ let board=require('../controller/board');
 
 
 // 게시글 메인화면
-router.get('/',board.listBoard)
+router.get('/',board.showMainBoard)
 
 // 이미지업로드
 router.post('/uploadimg', board.uploadImg)
