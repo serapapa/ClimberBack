@@ -15,16 +15,17 @@ board.showMainBoard=(req,res)=>{
         "POST_TYPE":"post_type"       
     });*/
     model.parseShowMainBoard(req.body)
-    .then((query)=>{
-        res.json(query);
-    })
+    .then((query)=>{res.json(query)})
 }
 
 
 
 // 이미지업로드
 board.uploadImg=(req,res)=>{
-    req.json()
+    model.parseUploadImg(req.body)
+    .then((query)=>{
+        res.json(query);
+    })
 }
 
 
@@ -69,7 +70,7 @@ board.editBoard=(req,res)=>{
 
 // 게시글 삭제
 board.deleteBoard=(req,res)=>{
-    model.parseDeleteBoard(res.body)
+    model.parseDeleteBoard(req.body)
     .then((query)=>{
         res.json(query);
     })
@@ -79,7 +80,10 @@ board.deleteBoard=(req,res)=>{
 
 // 하트 like가 거짓이면 하트수 증가, 아니면 감소.
 board.countHeart=(req,res)=>{
-    res.json()
+    model.parseCountHeart(req.body)
+    .then((query)=>{
+        res.json(query);
+    })
 /*
     if(!like){
         post_like++
@@ -92,16 +96,19 @@ board.countHeart=(req,res)=>{
 
 
 // 게시글 고정 - 해제
-board.addReply=(req,res)=>{
-    res.json()
-    
-    //모델
+board.fixedBoard=(req,res)=>{
+    model.parseFixedBoard(req.body)
+    .then((query)=>{
+        res.json(query);
+    })
 }
 
 
 
 // 덧글
 board.addReply=(req,res)=>{
-    res.json()
-    
+    model.parseAddReply(req.body)
+    .then((query)=>{
+        res.json(query);
+    })    
 }
