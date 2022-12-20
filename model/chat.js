@@ -2,63 +2,75 @@ let chat = new Object();
 
 chat.parseGetChatListBody = (body) =>{
     return new Promise((resolve, reject)=> {
-        let usrMstr = new Object();
+        let data = new Object();
 
-        usrMstr.nickName=body.nick_name;
+        let user= new Object();
+        user.user_no=body.user_no;
 
-        let chtRead = new Object();
-
-        chtRead.chatId=body.chat_id;
-        chtRead.cntUsr=body.user_no;
-        chtRead.chatNoRead=body.chat_text_id;
-
+       data.user=user;
         resolve(data);
     })
 }
 chat.parseGetChatview = (body) =>{
     return new Promise((resolve, reject)=> {
         
-        let chtData = new Object();
+        let data = new Object();
 
-        chtData.chatId=body.chat_id;
+        let chat_data = new Object();
+
+        chat_data.chat_id=body.chat_id;
+
+        data.chat_data=chat_data;
        
-        resolve(query);
+        resolve(data);
     })
 }
 chat.parseGetMessage = (body) =>{
     return new Promise((resolve, reject)=> {
 
-        let chtData = new Object();
-        
-        chtData.chatId=body.chat_id;
-        chtData.chatUsr=body.user_no;
-        chtData.chatCont=body.chat_cont;
-        chtData.chatDate=body.chat_date;
+        let data = new Object();
 
-        resolve(query);
+        let chat_data = new Object();
+
+        chat_data.chat_id=body.chat_id;
+        chat_data.chat_user_no=body.chat_user_no;
+        chat_data.chat_cont=body.chat_cont;
+        chat_data.chat_date=body.chat_date;
+
+        data.chat_data=chat_data;
+       
+        resolve(data);
     })
 }
 chat.getUserChatList = (body) =>{
     return new Promise((resolve, reject)=> {
 
-        let chtUsr = new Object();
-        
-        chtUsr.chatId=body.chat_id;
-        chtUsr.chatUsr=body.user_no;
+        let data = new Object();
 
-        resolve(query);
+        let chat_data = new Object();
+        
+        chat_data.chat_id=body.chat_id;
+        chat_data.chat_user_no=body.chat_user_no;
+
+        data.chat_data=chat_data;
+       
+        resolve(data);
     })
 }
 
 chat.getFriendsList = (body) =>{
     return new Promise((resolve, reject)=> {
 
-        let friend = new Object();
-        
-        friend.usrno=body.user_no;
-        friend.frino=body.friend_no;
+        let data = new Object();
 
-        resolve(query);
+        let freind = new Object();
+        
+        freind.user_no=body.user_no;
+        freind.friend_no=body.friend_no;
+
+        data.freind=freind;
+       
+        resolve(data);
     })
 }
 
